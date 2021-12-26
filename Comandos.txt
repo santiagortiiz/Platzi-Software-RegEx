@@ -1,0 +1,46 @@
+* Clases
+.           Cualquier Caracter (incluyendo los invisibles como los espacios)
+\d          Digitos
+\w          Palabras: Incluye dígitos + guión bajos + Aa-Zz
+\s          Espacios y muchos lenguajes saltos de linea
+\n          Saltos de línea
+"Caracteres  Son clases independientes"
+
+* Construccion de Clases (No importa el orden)
+[0-9]           Digitos
+[a-zA-Z0-9_]    Palabras
+[\.\-]          Encuentra los que incluyan punto ó guión (.- y -.)
+
+* Escapar caracteres con un '\'
+\.              Busca los puntos (No hace referencia a la clase . que indica cualquier caracter)
+[a-zA-Z0-9_\.]  Palabras y puntos
+\-              Escapar el guión
+\/              Escapar el slash
+
+* Delimitadores
+*   greedy: ninguno o todos (pueden aparecer)
++   1+, >= 1, uno o mas (deben aparece)
+?   0 o 1, <= 1, uno o ninguno (pueden aparecer). También delimita al conjunto mas pequeño encontrado
+
+* Contadores
+{minimo, maximo}
+{minimo,}       Al menos "minimo"
+
+* Anti-clases (^ dentro de una clase)
+\D, \W, \S,
+[^0-5]          Encuentra todo menos del 0 al 5
+
+* Principio y Fin de línea
+^   Inicio de linea
+$   Fin de linea
+
+Look ahead and behind (positive and negative)
+
+Given the string foobarbarfoo:
+
+bar(?=bar)     finds the 1st bar ("bar" which has "bar" after it)
+bar(?!bar)     finds the 2nd bar ("bar" which does not have "bar" after it)
+(?<=foo)bar    finds the 1st bar ("bar" which has "foo" before it)
+(?<!foo)bar    finds the 2nd bar ("bar" which does not have "foo" before it)
+
+     
