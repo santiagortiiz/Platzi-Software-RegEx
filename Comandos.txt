@@ -31,8 +31,8 @@
 [^0-5]          Encuentra todo menos del 0 al 5
 
 * Principio y Fin de línea
-^   Inicio de linea
-$   Fin de linea
+^   Inicio de linea (^\w)
+$   Fin de linea (\w$)
 
 Look ahead and behind (positive and negative)
 
